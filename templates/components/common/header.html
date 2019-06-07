@@ -9,23 +9,56 @@
     {{/each}}
 </div>
 {{/if}}
-<header class="header site" role="banner">
-    <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
-        <span class="mobileMenu-toggleIcon">Toggle menu</span>
-    </a>
-    {{> components/common/navigation}}
 
-    {{#if page_type '===' 'default'}}
-        <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
-            {{> components/common/store-logo}}
-        </h1>
-    {{else}}
-        <div class="header-logo header-logo--{{theme_settings.logo-position}}">
-            {{> components/common/store-logo}}
-        </div>
-    {{/if}}
-    {{{region name="header_bottom"}}}
-    <div class="navPages-container" id="menu" data-menu>
-        {{> components/common/navigation-menu}}
-    </div>
-</header>
+<div id="page" class="site">
+<header id="masthead" class="site-header ">
+<a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+        <span class="mobileMenu-toggleIcon">Toggle menu</span>
+</a>
+            <div class="desktop-head" data-mcs-theme="dark">
+                <a href="#" class="button button-mobile">MAKE AN APPOINTMENT</a>
+                <div class="logo">
+                    <a href="#">
+                        {{> components/common/store-logo}}
+                    </a>
+                </div>
+                <div class="header-nav">
+
+                    <nav id="menu" class="main-navigation" data-menu>
+                        <div class="menu-quick-links-container">
+                            <div class="wp-nav-header-menu">
+                                {{> components/common/navigation-menu}}
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                
+                <div class="gift-card">
+                    <div class="big-f">Gift Card</div>                    
+					<p><strong>“Ageless beauty is a timeless gift.”</strong></p>
+					<p>Treat yourself or a loved one<br>to the gift of beauty.</p>
+                    <a href="#" class="button">PURCHASE NOW</a>
+                </div>
+				
+                <div class="login-details">
+                    <a class="link" href="#">Login / Create Account</a>
+                </div>
+				
+                <div class="gift-mobile">
+                <a href="#" class="button grey-button">Gift Card</a>
+                <a href="#" target="_blank" class="button grey-button">Gift Card</a>
+                <div class="social-ic">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        </ul>
+                </div>
+				</div>
+				
+                <div class="adress">
+                    <span>114 Lorem St, Ipsum, NY 10013</span>                                        
+					<a href="tel:000000000">000.000.000</a>                
+				</div>
+			</div>
+        </header><!-- #masthead -->

@@ -1,8 +1,9 @@
-<div class="body" data-currency-code="{{currency_selector.active_currency_code}}">
-    {{#block "hero"}} {{/block}}
-    <div class="container">
-        {{#block "page"}} {{/block}}
-    </div>
+<div id="content" class="site-content clearfix" data-currency-code="{{currency_selector.active_currency_code}}">
+    <div class="container_new">{{#block "topbg"}} {{/block}}</div>
+    <div class="container_new">{{#block "page"}} {{/block}}</div>
+	<div class="container_new">{{#block "hero"}} {{/block}}</div>
+	<div class="container_new">{{#block "btmtxt"}} {{/block}}</div>
+	<div class="container_new">{{#block "products_new"}} {{/block}}</div>
     {{> components/common/modal}}
     {{> components/common/alert-modal}}
 </div>

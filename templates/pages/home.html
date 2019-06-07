@@ -1,46 +1,144 @@
 ---
 products:
-    new:
-        limit: {{theme_settings.homepage_new_products_count}}
-    featured:
-        limit: {{theme_settings.homepage_featured_products_count}}
-    top_sellers:
-        limit: {{theme_settings.homepage_top_products_count}}
+new:
+limit: {{theme_settings.homepage_new_products_count}}
+featured:
+limit: {{theme_settings.homepage_featured_products_count}}
+top_sellers:
+limit: {{theme_settings.homepage_top_products_count}}
 carousel: {{theme_settings.homepage_show_carousel}}
 blog:
-    recent_posts:
-        limit: {{theme_settings.homepage_blog_posts_count}}
+recent_posts:
+limit: {{theme_settings.homepage_blog_posts_count}}
 ---
-{{#partial "hero"}}
-    {{#if carousel}}
-        {{> components/carousel arrows=theme_settings.homepage_show_carousel_arrows}}
-    {{/if}}
+
+{{#partial "topbg"}}
+	<section class="home-banner border-left clearfix  bg-cover lazyload" style="background-image: url('http://developmentbox.online/tribeca-medspa/wp-content/uploads/2019/06/store_interior@2x-1136x508.jpg')">
+		<img class="img lazyload" src="http://developmentbox.online/tribeca-medspa/wp-content/uploads/2019/06/store_interior@2x-1136x508.jpg">
+	</section>
 {{/partial}}
 
 {{#partial "page"}}
 
-    {{#each shipping_messages}}
-        {{> components/common/alert-info message}}
-    {{/each}}
+	{{#each shipping_messages}}
+		{{> components/common/alert-info message}}
+	{{/each}}
 
-<div class="main full new">
-<center><h1>Custom Title</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada dolor at posuere vehicula. Curabitur sem arcu, scelerisque in facilisis vitae, pretium nec mauris. Nunc et dapibus metus, a bibendum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque hendrerit malesuada dolor vitae lacinia. Mauris interdum, erat sit amet consequat tincidunt, nulla augue facilisis ligula, vel blandit metus arcu id nulla. Vestibulum a feugiat orci, eu dictum orci. Aenean vitae convallis nunc. Phasellus tristique arcu ut blandit pulvinar. Phasellus ut turpis vehicula, molestie eros eget, scelerisque sapien. Donec bibendum dapibus euismod.</p></center>
-<hr>
+	<section class="common-data border-left clearfix">
+		<div class="two-col">
+			<div class="two-col-data">
+				<h3>DOES YOUR REFLECTION CHANGE HOW YOU FEEL?</h3>
+				<p>The way you feel when you look in the mirror is what really matters. Whether you are concerned about fine lines and wrinkles, acne, spider veins, brown spots, a dull dry complexion, or simply wish to maintain the flawless skin you’ve been blessed with, we will customize a treatment plan to your skin’s needs that will have you looking healthy, youthful and rejuvenated. Now is the time to take the first step toward having a reflection that says “I look and feel beautiful.”</p>
+			</div>
+			<div class="two-col-form">
+				<div class="big-f">Welcome to</div>
+				<p><strong>Tribeca MedSpa</strong> Book your appointment or<br>complimentary consultation:</p>
 
-<h1>{{theme_settings.box_title}}</h1>
-
-    {{#if products.featured}}
-        {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
-    {{/if}}
-
-    {{#if products.top_sellers}}
-        {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
-    {{/if}}
-
-    {{#if products.new}}
-        {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
-    {{/if}}
-</div>
+				<div class="wpcf7">
+					<form action="/" method="post">
+						<span><input type="text" name="your-name" value="" placeholder="Full Name"></span>
+						<span><input type="number" name="number-279" value="" placeholder="Phone"></span>
+						<span><input type="email" name="your-email" value="" placeholder="Email"></span>
+						<span><input type="submit" value="MAKE APPOINTMENT" class="wpcf7-submit"></span>
+					</form>
+				</div>
+			</div>
+	</section>
 {{/partial}}
+
+{{#partial "hero"}}
+	{{#if carousel}}
+		{{> components/carousel arrows=theme_settings.homepage_show_carousel_arrows}}
+	{{/if}}
+{{/partial}}
+
+{{#partial "btmtxt"}}
+	<section class="service-sec clearfix">
+		<section class="two-col-sec women-service clearfix">
+			<!-- <div class="row">-->
+			<div class="service-images  bg-cover" style="background-image: url('http://developmentbox.online/tribeca-medspa/wp-content/uploads/2019/05/women-ser-492x314.jpg')">
+				<img class="img lazyload" src="http://developmentbox.online/tribeca-medspa/wp-content/themes/trebeca-medspa/images/media/women-ser.jpg">
+			</div>
+			<div class="service-contain">
+				<div class="title-big"><span>services for</span>Women</div>
+				<div class="dash-list three-col">
+					<ul>
+						<li><a href="#">demo</a></li>
+						<li><a href="#">Liquid Face Lift</a></li>
+						<li><a href="#">Trusculpt Fat Reduction</a></li>
+						<li><a href="#">Laser Treatments</a></li>
+						<li><a href="#">Fat Reduction</a></li>
+						<li><a href="#">Skin Tightening</a></li>
+						<li><a href="#">Body Treatments</a></li>
+						<li><a href="#">Skin Care</a></li>
+						<li><a href="#">Hair Removal</a></li>
+					</ul>
+					<a href="#" class="link-border">View All</a>
+				</div>
+			</div>
+			<!--</div>-->
+		</section>
+
+		<section class="two-col-sec men-service clearfix">
+			<!-- <div class="row">-->
+			<div class="service-images  bg-cover" style="background-image: url('http://developmentbox.online/tribeca-medspa/wp-content/uploads/2019/05/men-ser-492x314.jpg')">
+				<img class="img lazyload" src="http://developmentbox.online/tribeca-medspa/wp-content/themes/trebeca-medspa/images/media/men-ser.jpg">
+			</div>
+			<div class="service-contain">
+				<div class="title-big"><span>services for</span>Men</div>
+				<div class="dash-list three-col">
+					<ul>
+						<li><a href="#">Skin Tightening</a></li>
+						<li><a href="#">Laser Treatments</a></li>
+						<li><a href="#">Hair Removal</a></li>
+						<li><a href="#">Body Treatments</a></li>
+						<li><a href="#">Fat Reduction</a></li>
+						<li><a href="#">Injectables</a></li>
+						<li><a href="#">Consultation</a></li>
+						<li><a href="#">Excessive Sweating</a></li>
+						<li><a href="#">Skin Care</a></li>
+					</ul>
+					<a href="#" class="link-border">View All</a>
+				</div>
+			</div>
+			<!--</div>-->
+		</section>
+	</section>
+	
+	<section class="testimonial-sec slider clearfix">
+	<div class="elfsight-app-adc7548c-4ca8-4777-b364-0fbd8220ad41"></div>
+	</section>
+	
+	<section class="three-col-sec service-three-col clearfix">
+	{{> components/gallery}}
+	</section>
+	
+	<section class="about-hm-sec clearfix">
+    <div class="about-logo"><img class="img lazyload" src="http://developmentbox.online/tribeca-medspa/wp-content/uploads/2019/04/CareCredit_Logo-378x48.png"></div>            <div class="content">
+        <h3>LIKE A CARD BUT BETTER</h3>        <p>
+            CareCredit works just like a credit card, but is exclusive for healthcare services. With low monthly payments every time you use it, you can use your card over and over for follow-up appointments or different treatments. This means you don’t have to put your health and beauty needs on hold until you save up enough money. We give you the power to decide when it’s the right time for you. test</p>
+                                        <a href="#" class="link-border" target="_blank">Learn More</a>
+                        </div>
+</section>
+	
+	<section>
+<div class="elfsight-app-cd9ecb88-d592-4a37-85cd-1673a7521918"></div>
+	</section>
+	
+{{/partial}}
+
+{{#partial "products_new"}}
+	{{#if products.featured}}
+		{{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
+	{{/if}}
+
+	{{#if products.top_sellers}}
+		{{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
+	{{/if}}
+
+	{{#if products.new}}
+		{{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
+	{{/if}}
+{{/partial}}
+
 {{> layout/base}}

@@ -1,26 +1,30 @@
 [
-  {
-    "name": "Custom",
-    "settings": [
-      {
-        "type": "color",
-        "label": "Home Text",
-        "id": "home-text"
-      }
-    ]
-  },
   {  
-		"name":"Custom Fild",
+		"name":"Home Gallary",
 		"settings":[  
 			{  
 				"type":"heading",
-				"content":"Custom Name"
+				"content":"Gallary"
 			},
 			{  
 				"type":"text",
-				"label":"Box Title",
+				"label":"Gallary One",
 				"force_reload":true,
-				"id":"box_title"
+				"id":"gallery_one"
+			},
+			{
+				"type": "checkbox",
+				"label": "Add New Gallary",
+				"force_reload": true,
+				"id": "new_one_gallary"
+			},
+			{
+				"type": "text",
+				"label": "Gallary Two",
+				"id": "gallery_two",
+				"force_reload": true,
+				"reference": "new_one_gallary",
+				"reference_default": false
 			}
 		]
    },

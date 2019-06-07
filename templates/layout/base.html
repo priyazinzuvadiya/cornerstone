@@ -17,7 +17,7 @@
 
         {{ getFontsCollection }}
         {{{stylesheet '/assets/css/theme.css'}}}
-		{{{stylesheet '/assets/css/style.css'}}}
+		<link href="/assets/css/style.css" media="all" type="text/css" rel="stylesheet" />
 
         {{{head.scripts}}}
         {{{head.rsslinks}}}
@@ -29,6 +29,9 @@
         {{inject 'secureBaseUrl' settings.secure_base_url}}
         {{inject 'cartId' cart_id}}
         {{inject 'template' template}}
+		
+		<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+		<script src="https://www.powr.io/powr.js?platform=bigcommerce"></script>
     </head>
     <body>
         <svg data-src="{{cdn 'img/icon-sprite.svg'}}" class="icons-svg-sprite"></svg>
